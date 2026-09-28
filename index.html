@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printer Manager - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🖨️ 3D Printer Manager</h1>
+            <div class="stats">
+                <div class="stat">💰 Budget: €<span id="money">1000</span></div>
+                <div class="stat">⏰ Dag: <span id="day">1</span></div>
+                <div class="stat">⭐ Level: <span id="level">1</span></div>
+            </div>
+        </div>
+
+        <div class="game-main">
+            <!-- Printer Status -->
+            <div class="panel printer-panel">
+                <h2>🖨️ Je Printer</h2>
+                <div class="printer-info">
+                    <div class="printer-model">Model: <span id="printer-model">Basic 3D Printer</span></div>
+                    <div class="printer-status">Status: <span id="printer-status" class="status-idle">Inactief</span></div>
+                    <div class="printer-progress">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span id="progress-text">Klaar om af te drukken</span>
+                    </div>
+                </div>
+                <div class="materials">
+                    <h3>📦 Materialen</h3>
+                    <div id="materials-list" class="materials-list">
+                        <div class="material-item">
+                            <span>PLA</span>
+                            <div class="amount"><span id="pla-amount">100</span>g</div>
+                        </div>
+                        <div class="material-item">
+                            <span>ABS</span>
+                            <div class="amount"><span id="abs-amount">50</span>g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Jobs -->
+            <div class="panel jobs-panel">
+                <h2>📋 Beschikbare Opdrachten</h2>
+                <div id="jobs-list" class="jobs-list"></div>
+            </div>
+
+            <!-- Shop -->
+            <div class="panel shop-panel">
+                <h2>🛒 Winkel</h2>
+                <div id="shop-items" class="shop-items"></div>
+            </div>
+
+            <!-- Upgrades -->
+            <div class="panel upgrades-panel">
+                <h2>⚙️ Upgrades</h2>
+                <div id="upgrades-list" class="upgrades-list"></div>
+            </div>
+
+            <!-- History/Achievements -->
+            <div class="panel history-panel">
+                <h2>🏆 Prestaties</h2>
+                <div id="achievements" class="achievements-list"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button id="next-day-btn" class="btn btn-primary">→ Volgende Dag</button>
+            <button id="save-game-btn" class="btn btn-secondary">💾 Spel Opslaan</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
